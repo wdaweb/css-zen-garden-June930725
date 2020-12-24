@@ -1,0 +1,355 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* basic elements */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+  font-weight: 800;
+  overflow-x: hidden;
+  transition: 1s;
+}
+/* color => #1E1B8C / #CEDEF2 / #F2E394 / #F2C6B6 / #F26363 */
+body {
+  width: 100%;
+  height: 100%;
+  background: url("./images/gray-01.jpg") center/cover;
+}
+p {
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+h3 {
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+a:link {
+  color: #444;
+}
+
+header abbr {
+  font-weight: 900;
+  color: #f2e394;
+}
+
+abbr {
+  font-weight: 400;
+  color: #f2e394;
+  text-decoration: none;
+}
+
+/* specific divs */
+.page-wrapper {
+  background: url(./images/bg01-01.png) no-repeat center center/cover;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+header {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  display: none;
+}
+
+header h2::before {
+  content: "CSS Zen Garden";
+  color: #fff;
+  font-size: 1.5rem;
+  -webkit-writing-mode: vertical-lr;
+  position: absolute;
+  top: 15px;
+  left: -50px;
+}
+
+header h2 {
+  width: 60%;
+  height: 60%;
+  background: #0432df;
+
+  margin: auto;
+  padding: 7% 3%;
+  color: #fff;
+  font-size: 8rem;
+  text-align: center;
+  line-height: 10rem;
+}
+
+header h2::after {
+  content: "";
+  width: 51%;
+  height: 60%;
+  border: #fff 4px solid;
+  position: absolute;
+  top: 22%;
+  left: 25.5%;
+  pointer-events: none;
+}
+
+.summary,
+.preamble {
+  display: none;
+}
+
+.intro:hover .summary {
+  display: block !important;
+  width: 52%;
+  height: 18%;
+  background: #cedef2;
+  padding: 3% 3% 0;
+  color: #000;
+  position: absolute;
+  top: 22%;
+  left: 25.5%;
+  line-height: 2rem;
+  overflow: hidden !important;
+}
+.intro:hover .preamble {
+  display: block !important;
+  width: 52%;
+  height: 43%;
+  background: #cedef2;
+  padding: 3% 3%;
+  color: #000;
+  position: absolute;
+  top: 40%;
+  left: 25.5%;
+  line-height: 2rem;
+  overflow: hidden !important;
+}
+
+.summary p,
+.preamble p {
+  font-weight: 300;
+}
+
+.summary a,
+.preamble a {
+  font-weight: 400;
+}
+
+.summary abbr,
+.preamble abbr {
+  color: #0432df;
+}
+
+.preamble h3 {
+  font-size: 1.8rem !important;
+  font-weight: 500;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  /* font: italic 1.1em/2.2 georgia;
+  text-align: center; */
+}
+
+.supporting {
+  width: 85%;
+  height: 100vh;
+  float: left;
+  overflow: hidden;
+  background: url(./images/bg01-02.png) no-repeat center center/cover;
+}
+
+.explanation {
+  float: left;
+  /* background: #0432df; */
+  background: url(./images/boxtop-01.jpg) no-repeat center center/cover;
+}
+
+.participation {
+  float: right;
+  /* background: #ef554f; */
+  background: url(./images/boxtop-02.jpg) no-repeat center center/cover;
+}
+
+.benefits {
+  float: left;
+  /* background: #ffbd38; */
+  background: url(./images/boxtop-03.jpg) no-repeat center center/cover;
+}
+
+.requirements {
+  float: right;
+  /* background: #01be90; */
+  background: url(./images/boxtop-04.jpg) no-repeat center center/cover;
+}
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  width: 48%;
+  height: 44%;
+  padding: 3%;
+  margin: 0.5%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explanation,
+.benefits {
+  margin-left: 2.5%;
+}
+
+.explanation:hover {
+  display: block;
+  background: url(./images/box-01.jpg) no-repeat center/cover;
+}
+.participation:hover {
+  display: block;
+  background: url(./images/box-02.jpg) no-repeat center/cover;
+}
+.benefits:hover {
+  display: block;
+  background: url(./images/box-03.jpg) no-repeat center/cover;
+}
+.requirements:hover {
+  display: block;
+  background: url(./images/box-04.jpg) no-repeat center/cover;
+}
+
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.explanation p,
+.participation p,
+.benefits p,
+.requirements p {
+  display: none;
+}
+
+.explanation:hover h3,
+.participation:hover h3,
+.benefits:hover h3,
+.requirements:hover h3 {
+  display: none;
+}
+
+.explanation:hover p,
+.participation:hover p,
+.benefits:hover p,
+.requirements:hover p {
+  font-size: 1rem;
+  display: block;
+  flex-wrap: nowrap;
+}
+
+.explanation a,
+.participation a,
+.benefits a,
+.requirements a {
+  font-weight: 400;
+  color: #ccc;
+}
+
+footer {
+  width: 97%;
+  height: 4%;
+  margin-left: 2.5%;
+  clear: both;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(230, 154, 130, 0.3);
+}
+
+footer a {
+  color: #ef554f !important;
+  font-weight: 500 !important;
+}
+
+footer a:visited {
+  color: #e69a82;
+  font-weight: 500 !important;
+}
+
+.sidebar {
+  width: 14%;
+  height: 100%;
+  float: right;
+  margin-top: 0.45%;
+  position: relative;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+  width: 90%;
+  padding: 5%;
+  margin-bottom: 10%;
+}
+
+.design-selection:hover,
+.design-archives:hover,
+.zen-resources:hover {
+  transform: translate(7px, 7px);
+  transition: 0s !important;
+}
+
+.design-selection h3,
+.design-archives h3,
+.zen-resources h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.design-selection li,
+.design-archives li,
+.zen-resources li {
+  font-weight: 300;
+}
+
+.design-selection a,
+.design-archives a,
+.zen-resources a {
+  font-weight: 400;
+}
+
+.design-selection {
+  background: #fff;
+  opacity: 0.9;
+}
+
+.design-archives {
+  background: #fff;
+  opacity: 0.7;
+}
+
+.zen-resources {
+  background: #fff;
+  opacity: 0.9;
+}
+
+.zen-resources abbr {
+  color: #aaa !important;
+}
